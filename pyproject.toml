@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iFit"
+version = "0.0.1"
+dependencies = [
+    "numpy",
+    "scipy"
+]
+
+[tool.setuptools]
+packages = ["ifit"]
+
+[project.optional-dependencies]
+GUI = ["matplotlib", "tqdm", "pandas", "pyyaml", "pyserial", "utm", "PySide2", "pyqtgraph", "seabreeze", "pyqtdarktheme"]
