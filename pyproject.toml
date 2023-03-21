@@ -11,7 +11,14 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["ifit"]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ifit"]
+
+[tool.setuptools.package-data]
+ifit = ["*.txt"]
 
 [project.optional-dependencies]
 GUI = ["matplotlib", "tqdm", "pandas", "pyyaml", "pyserial", "utm", "PySide2", "pyqtgraph", "seabreeze", "pyqtdarktheme"]
